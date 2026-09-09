@@ -1,5 +1,9 @@
 # Prime.jl
 
+<p align="center">
+  <img src="sc.png" width="850">
+</p>
+
 **Prime.jl** is a Julia package that implements a **cell clustering method based on a biophysical gene-expression model**, formulated under the **Probability Generating Function (PGF)** framework.
 
 The package provides a concise public interface with two main entry-point functions:
