@@ -1,13 +1,11 @@
-# ====== 聚类会用到的 ======
-
-
+# ====== use for Clustering stage ======
 
 function his_gf(rdn_val, rdm_val, z)
     z1, z2 = z
     return z1^rdn_val * z2^rdm_val
 end
 
-# ====== 推断会用到的 ======
+# ====== use for Inference stage ======
 
 function mean_std_raw(col, pos)
     n = 0
@@ -176,7 +174,7 @@ function ensure_positive_definite(matrix, ϵ::Float64 = 1e-8)
     return Matrix(A)
 end
 
-# t / T 默认网格
+#Default t/T grid
 function default_t()
     t0 = collect(0.95:0.04/6:0.99)
     [(t0[i], t0[j]) for i in 1:length(t0), j in 1:length(t0)] |> vec

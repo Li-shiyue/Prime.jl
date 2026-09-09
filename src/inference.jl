@@ -40,7 +40,7 @@ import ..default_T
     y ~ MvNormal(μ, Σ)
 end
 
-# --------- 单 gene + 所有 cluster 的工作单元（worker 上跑） ---------
+# --------- Worker task: process one gene across all clusters ---------
 function BayInf_gene_pgf!(gi::Int,
                           genes,
                           rdn, rdm, β,
